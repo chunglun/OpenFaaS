@@ -1,0 +1,6 @@
+/Users/chunglun/.arkade/bin/faas-cli secret create apikey --from-file=/Users/chunglun/Documents/GitHub/OpenFaaS/apiprotected/apikey.txt
+
+
+curl --data-binary /Users/chunglun/Documents/GitHub/OpenFaaS/golden-gate.jpg http://127.0.0.1:8080/function/apiprotected
+
+curl --data-binary /Users/chunglun/Documents/GitHub/OpenFaaS/golden-gate.jpg --header "apikey=YqzKzSJw51K9zPpQ3R3N" http://127.0.0.1:8080/function/apiprotected > bw.jpg

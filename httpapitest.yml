@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  httpapitest:
+    lang: python3-flask-debian
+    handler: ./httpapitest
+    image: chunglunlu/httpapitest:latest
+    environment:
+      RAW_BODY: True

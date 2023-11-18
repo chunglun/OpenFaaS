@@ -1,0 +1,14 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  apiprotected:
+    lang: python3-http-debian
+    handler: ./apiprotected
+    image: chunglunlu/apiprotected:latest
+    environment:
+      RAW_BODY: True
+    secrets:
+      - apikey
+
